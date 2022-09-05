@@ -198,3 +198,4 @@ equalButton.addEventListener('click', () => {
     let inputs = extractValues();
     return handleCalculation(inputs);
 });
+backButton.addEventListener('click', handleBackButton);
