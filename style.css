@@ -4,3 +4,11 @@
     --space-sm: 0.75em;
     --space-md: 1em;
 }
+
+/* box sizing and margins */
+*,
+*::before,
+*::after {
+    box-sizing: border-box;
+    margin: 0;
+}
