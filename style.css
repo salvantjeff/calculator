@@ -58,4 +58,8 @@ body {
     padding: var(--space-sm);
     border: 1px solid #bdbdbd;
     border-radius: 2em;
+
+    text-align: right;
+    font-size: 1.5rem;
+    
 }
