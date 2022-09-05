@@ -80,3 +80,10 @@ body {
 .inputs {
     font-size: 2rem;
 }
+
+/* BUTTONS AREA */
+.buttons {
+    display: grid;
+    grid-template-columns: 2fr 1fr;
+    grid-template-rows: auto auto;
+}
