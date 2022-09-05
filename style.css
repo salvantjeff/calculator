@@ -45,4 +45,7 @@ body {
     padding: var(--space-md);
     border-radius: 0.4em;
     margin: auto;
+
+    background-color: white;
+    box-shadow: 0 0 10px #222;
 }
