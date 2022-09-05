@@ -52,3 +52,10 @@ body {
     display: grid;
     gap: 1em;
 }
+
+/* OUTPUT SCREEN AREA */
+.output-screen {
+    padding: var(--space-sm);
+    border: 1px solid #bdbdbd;
+    border-radius: 2em;
+}
