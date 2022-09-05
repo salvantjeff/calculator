@@ -116,3 +116,7 @@ button {
     height: 100%;
     border: 1px solid white;
 }
+
+button:hover {
+    background-color: lightblue;
+}
