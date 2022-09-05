@@ -42,4 +42,7 @@ body {
 .calculator {
     width: clamp(300px, 80vw, 350px);
     max-height: 500px;
+    padding: var(--space-md);
+    border-radius: 0.4em;
+    margin: auto;
 }
