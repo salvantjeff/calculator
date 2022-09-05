@@ -75,3 +75,25 @@ function handleNumbers(subject){
     index++;
     console.log(userInputs)
 }
+
+function handleOperators() {
+    let operator = this.dataset.val
+
+    userInputs.push(operator)
+    dotCount = 0;
+    count++;
+    index++;
+    console.log(userInputs)
+    if (count >= 2) {
+        let results = handleRobustCalcs();
+        console.log(results);
+        let calc = [handleCalculation(results)];
+        console.log(calc)
+        newArr = calc.concat(userInputs.slice(index))
+        console.log(newArr, userInputs)
+        userInputs = [...newArr];
+        console.log(newArr, userInputs)
+        count--;
+        index = userInputs.length - 1;
+    }
+}
