@@ -48,4 +48,7 @@ body {
 
     background-color: white;
     box-shadow: 0 0 10px #222;
+
+    display: grid;
+    gap: 1em;
 }
