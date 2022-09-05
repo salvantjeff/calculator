@@ -35,3 +35,13 @@ function operate(operator, num1, num2) {
     if (!(operator in operators)) return 'invalid operator';
     else return operators[operator](num1, num2);
 }
+
+// Select html elements
+const buttons = document.querySelectorAll('.input-value');
+const screen = document.querySelector('.inputs');
+const screenHistory = document.querySelector('.history');
+const operatorButtons = document.querySelectorAll('.operator');
+const equalButton = document.querySelector('.enter');
+const backButton = document.querySelector('.back');
+const clearButton = document.querySelector('.clear');
+const placeholder = document.querySelector('.placeholder');
