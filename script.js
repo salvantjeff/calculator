@@ -194,3 +194,7 @@ function handleNumbersFunc(){
 
 buttons.forEach(button => button.addEventListener('click', handleNumbersFunc));
 operatorButtons.forEach(button => button.addEventListener('click', handleOperators));
+equalButton.addEventListener('click', () => {
+    let inputs = extractValues();
+    return handleCalculation(inputs);
+});
