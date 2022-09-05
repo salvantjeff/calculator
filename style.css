@@ -137,3 +137,9 @@ button:hover {
 .equal {
     border-radius: 0 0 2em 0;
 }
+
+/* FOOTER AREA */
+footer {
+    text-align: center;
+    padding: 1em;
+}
