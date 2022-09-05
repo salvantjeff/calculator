@@ -158,3 +158,11 @@ function handleCalculation(inputs){
             return undefined;
     }
 }
+
+function handleBackButton() {
+    userInputs.pop()
+    let numInputs = extractValues()
+    screen.textContent = (numInputs.num1) ? numInputs.num1 : 0;
+    screenHistory.textContent = userInputs.join('');
+    console.log(userInputs)
+}
