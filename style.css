@@ -125,3 +125,7 @@ button:hover {
     grid-column: span 2;
     border-radius: 0 0 0 2em;
 }
+
+.clear {
+    border-radius: 2em 0 0 0;
+}
