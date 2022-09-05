@@ -166,3 +166,17 @@ function handleBackButton() {
     screenHistory.textContent = userInputs.join('');
     console.log(userInputs)
 }
+
+function handleClear() {
+    while (userInputs.length > 0) {
+        userInputs.pop();
+    }
+    console.log(userInputs)
+    screen.textContent = 0;
+    screenHistory.textContent = userInputs.join('');
+    placeholder.textContent = 0;
+    //reset initial values
+    index = -1;
+    count = 0;
+    dotCount = 0;
+}
