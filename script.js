@@ -200,3 +200,41 @@ equalButton.addEventListener('click', () => {
 });
 backButton.addEventListener('click', handleBackButton);
 clearButton.addEventListener('click', handleClear);
+
+window.addEventListener('keydown', (e)=> {
+    // console.log(e.shiftKey)
+    let buttonWithShift;
+    let button;
+
+    // shift key held down 
+    if (e.shiftKey) {
+        buttonWithShift = document.querySelector(`button[data-val="${e.key}"]`)
+        // console.log(buttonWithShift)
+    }
+    if (buttonWithShift) {
+        userInputs.push(buttonWithShift.dataset.val)
+        console.log(userInputs)
+    }
+// maybe return here
+    if (!e.shiftKey) {
+        button = document.querySelector(`button[data-val="${e.key}"]`) 
+        // console.log(button);
+    }
+    if (button) {
+        // if (button.dataset.val) userInputs.push(button.dataset.val)
+        if (button.dataset.val) {
+            console.log(button.dataset.val);
+            if (button.dataset.val === '/' ||
+                button.dataset.val === '-' ||
+                button.dataset.val === '.' ||
+                button.dataset.val === '=' ||
+                button.dataset.val === 'Backspace') {
+                    userInputs.push(button.dataset.val)
+            } else {
+                button = parseFloat(button.dataset.val);
+                userInputs.push(button)
+            }
+        }
+        console.log(userInputs)
+    }
+});
