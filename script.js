@@ -199,3 +199,4 @@ equalButton.addEventListener('click', () => {
     return handleCalculation(inputs);
 });
 backButton.addEventListener('click', handleBackButton);
+clearButton.addEventListener('click', handleClear);
