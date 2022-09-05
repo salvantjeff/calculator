@@ -65,3 +65,10 @@ body {
     color: white;
     background-color: #222;
 }
+
+.history-screen {
+    font-size: 0.85rem;
+
+    display: flex;
+    justify-content: end;
+}
