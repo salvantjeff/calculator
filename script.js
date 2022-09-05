@@ -45,3 +45,9 @@ const equalButton = document.querySelector('.enter');
 const backButton = document.querySelector('.back');
 const clearButton = document.querySelector('.clear');
 const placeholder = document.querySelector('.placeholder');
+
+// Define variables
+let userInputs = [];
+let count = 0;
+let index = -1;
+let dotCount = 0;
