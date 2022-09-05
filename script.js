@@ -193,3 +193,4 @@ function handleNumbersFunc(){
 }
 
 buttons.forEach(button => button.addEventListener('click', handleNumbersFunc));
+operatorButtons.forEach(button => button.addEventListener('click', handleOperators));
