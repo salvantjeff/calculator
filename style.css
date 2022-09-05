@@ -38,3 +38,8 @@ body {
   
     grid-template-rows: 1fr auto;
 }
+
+.calculator {
+    width: clamp(300px, 80vw, 350px);
+    max-height: 500px;
+}
