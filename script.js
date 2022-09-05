@@ -51,3 +51,27 @@ let userInputs = [];
 let count = 0;
 let index = -1;
 let dotCount = 0;
+
+function handleNumbers(subject){
+
+    console.log(subject)
+    let value = subject.dataset.val;
+    if (value === '.') {
+        console.log(value)
+        if (dotCount >= 1){
+            value = '';
+        }
+        dotCount++;
+    } else {
+        value = parseFloat(subject.dataset.val)
+    }
+   
+    userInputs.push(value)
+    
+    let numInputs = extractValues()
+    screen.textContent = (numInputs.num2) ? numInputs.num2 : numInputs.num1;
+    screenHistory.textContent = userInputs.join('');
+    
+    index++;
+    console.log(userInputs)
+}
