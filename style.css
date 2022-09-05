@@ -13,6 +13,16 @@
     margin: 0;
 }
 
+/* button defaults */
+button {
+    font: inherit;
+    display: block;
+    padding: var(--space-sm);
+    border: none;
+    background-color: #222;
+    color: white;
+}
+
 /* body defaults */
 body {
     min-height: 100vh;
