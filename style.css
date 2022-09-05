@@ -76,3 +76,7 @@ body {
 .placeholder {
     opacity: 0;
 }
+
+.inputs {
+    font-size: 2rem;
+}
