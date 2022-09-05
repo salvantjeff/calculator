@@ -187,3 +187,7 @@ function handleRobustCalcs() {
         return extractValues();
     }
 }
+
+function handleNumbersFunc(){
+    handleNumbers(this)
+}
