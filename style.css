@@ -129,3 +129,7 @@ button:hover {
 .clear {
     border-radius: 2em 0 0 0;
 }
+
+.back {
+    border-radius: 0 2em 0 0;
+}
