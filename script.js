@@ -97,3 +97,33 @@ function handleOperators() {
         index = userInputs.length - 1;
     }
 }
+
+function extractValues() {
+    let first = [];
+    let second = [];
+    let i = 0;
+    let current = userInputs[i];
+    while (typeof current === 'number' || current === '.') {
+        first.push(current);
+        i++;
+        current = userInputs[i];
+    }
+    let theOperator = userInputs[i]
+    while (i+1 < userInputs.length) {
+        current = userInputs[i+1];
+        second.push(current);
+        i++;
+    }
+    console.log(first, second)
+    let num1 = first.map(item => `${item}`).join('');
+    let num2 = second.map(item => `${item}`).join('');
+    num1 = parseFloat(num1);
+    num2 = parseFloat(num2);
+
+    const values = {
+        num1: num1,
+        num2: num2,
+        theOperator: theOperator
+    }
+    return values
+}
