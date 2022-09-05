@@ -127,3 +127,34 @@ function extractValues() {
     }
     return values
 }
+
+function handleCalculation(inputs){
+    let result;
+    switch (inputs.theOperator) {
+        case '+':
+            result = operate(inputs.theOperator, inputs.num1, inputs.num2);
+            screen.textContent = result;
+            screenHistory.textContent = userInputs.join('');
+            return result;
+        case '-':
+            result = operate(inputs.theOperator, inputs.num1, inputs.num2);
+            screen.textContent = result;
+            screenHistory.textContent = userInputs.join('');
+            return result;
+        case '*':
+            result = operate(inputs.theOperator, inputs.num1, inputs.num2);
+            screen.textContent = result;
+            screenHistory.textContent = userInputs.join('');
+            return result;
+        case '/':
+            result = operate(inputs.theOperator, inputs.num1, inputs.num2);
+            if (result == Infinity) {
+                result = ("this calculation is forbidden by the gods").toUpperCase()
+            }
+            screen.textContent = result;
+            screenHistory.textContent = userInputs.join('');
+            return result;
+        default:
+            return undefined;
+    }
+}
