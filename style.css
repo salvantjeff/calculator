@@ -91,7 +91,13 @@ body {
 .adv-buttons {
     grid-column: 1 / 3;
     grid-row: 1 / 2;
-    
+
     display: grid;
     grid-template-columns: repeat(2, 1fr);
+}
+
+.operators {
+    grid-column: 2 / 3;
+    grid-row: 2 / 3;
+
 }
