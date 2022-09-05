@@ -191,3 +191,5 @@ function handleRobustCalcs() {
 function handleNumbersFunc(){
     handleNumbers(this)
 }
+
+buttons.forEach(button => button.addEventListener('click', handleNumbersFunc));
