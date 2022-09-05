@@ -180,3 +180,10 @@ function handleClear() {
     count = 0;
     dotCount = 0;
 }
+
+function handleRobustCalcs() {
+
+    if (count >= 2) {
+        return extractValues();
+    }
+}
