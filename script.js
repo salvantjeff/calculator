@@ -66,7 +66,13 @@ function handleNumbers(subject){
         value = parseFloat(subject.dataset.val);
     }
    
-    userInputs.push(value);
+    if (userInputs.length < 10) {
+        userInputs.push(value);
+      } else if (userInputs.length < 13) {
+        if (typeof userInputs[userInputs.length - 1] !== 'number') {
+          userInputs.push(value);
+        }
+    }
     
     let numInputs = extractValues();
     screen.textContent = (numInputs.num2) ? numInputs.num2 : numInputs.num1;
