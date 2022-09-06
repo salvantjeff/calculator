@@ -1,5 +1,7 @@
 # calculator
 
+## [Live Demo](https://salvantjeff.github.io/calculator/)
+
 ![Calculator](images/calc-screen-shot.png)
 
 ## Introduction 
