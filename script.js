@@ -63,36 +63,36 @@ function handleNumbers(subject){
         }
         dotCount++;
     } else {
-        value = parseFloat(subject.dataset.val)
+        value = parseFloat(subject.dataset.val);
     }
    
-    userInputs.push(value)
+    userInputs.push(value);
     
-    let numInputs = extractValues()
+    let numInputs = extractValues();
     screen.textContent = (numInputs.num2) ? numInputs.num2 : numInputs.num1;
     screenHistory.textContent = userInputs.join('');
     
     index++;
-    console.log(userInputs)
+    console.log(userInputs);
 }
 
 function handleOperators() {
-    let operator = this.dataset.val
+    let operator = this.dataset.val;
 
-    userInputs.push(operator)
+    userInputs.push(operator);
     dotCount = 0;
     count++;
     index++;
-    console.log(userInputs)
+    console.log(userInputs);
     if (count >= 2) {
         let results = handleRobustCalcs();
         console.log(results);
         let calc = [handleCalculation(results)];
-        console.log(calc)
-        newArr = calc.concat(userInputs.slice(index))
-        console.log(newArr, userInputs)
+        console.log(calc);
+        newArr = calc.concat(userInputs.slice(index));
+        console.log(newArr, userInputs);
         userInputs = [...newArr];
-        console.log(newArr, userInputs)
+        console.log(newArr, userInputs);
         count--;
         index = userInputs.length - 1;
     }
@@ -114,7 +114,7 @@ function extractValues() {
         second.push(current);
         i++;
     }
-    console.log(first, second)
+    console.log(first, second);
     let num1 = first.map(item => `${item}`).join('');
     let num2 = second.map(item => `${item}`).join('');
     num1 = parseFloat(num1);
@@ -125,7 +125,7 @@ function extractValues() {
         num2: num2,
         theOperator: theOperator
     }
-    return values
+    return values;
 }
 
 function handleCalculation(inputs){
@@ -164,7 +164,7 @@ function handleBackButton() {
     let numInputs = extractValues()
     screen.textContent = (numInputs.num1) ? numInputs.num1 : 0;
     screenHistory.textContent = userInputs.join('');
-    console.log(userInputs)
+    console.log(userInputs);
 }
 
 function handleClear() {
@@ -189,15 +189,17 @@ function handleRobustCalcs() {
 }
 
 function handleNumbersFunc(){
-    handleNumbers(this)
+    handleNumbers(this);
 }
 
 buttons.forEach(button => button.addEventListener('click', handleNumbersFunc));
 operatorButtons.forEach(button => button.addEventListener('click', handleOperators));
+
 equalButton.addEventListener('click', () => {
     let inputs = extractValues();
     return handleCalculation(inputs);
 });
+
 backButton.addEventListener('click', handleBackButton);
 clearButton.addEventListener('click', handleClear);
 
@@ -208,16 +210,16 @@ window.addEventListener('keydown', (e)=> {
 
     // shift key held down 
     if (e.shiftKey) {
-        buttonWithShift = document.querySelector(`button[data-val="${e.key}"]`)
+        buttonWithShift = document.querySelector(`button[data-val="${e.key}"]`);
         // console.log(buttonWithShift)
     }
     if (buttonWithShift) {
-        userInputs.push(buttonWithShift.dataset.val)
-        console.log(userInputs)
+        userInputs.push(buttonWithShift.dataset.val);
+        console.log(userInputs);
     }
 // maybe return here
     if (!e.shiftKey) {
-        button = document.querySelector(`button[data-val="${e.key}"]`) 
+        button = document.querySelector(`button[data-val="${e.key}"]`);
         // console.log(button);
     }
     if (button) {
@@ -232,9 +234,10 @@ window.addEventListener('keydown', (e)=> {
                     userInputs.push(button.dataset.val)
             } else {
                 button = parseFloat(button.dataset.val);
-                userInputs.push(button)
+                userInputs.push(button);
             }
         }
-        console.log(userInputs)
+        console.log(userInputs);
     }
 });
+
