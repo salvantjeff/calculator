@@ -64,6 +64,7 @@ body {
     height: max-content;
     color: white;
     background-color: #222;
+    overflow: hidden;
 }
 
 .history-screen {
